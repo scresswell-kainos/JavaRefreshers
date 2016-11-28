@@ -1,0 +1,44 @@
+	import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class arryForArrays {
+
+	private int numPeople;
+	
+
+	public void setNumPeople (int n){
+		numPeople = n;
+	}
+	
+	
+	public int winnerIs(){
+		return ((int)(Math.random()*numPeople));
+	}
+	
+	public String[] getPeople(){
+		String[] listOfPeople = {
+				"Annie",
+				"Bob",
+				"Craig",
+				"Donna",
+				"Eddie",
+				"Fran",
+				"Georgina"
+		};
+		return listOfPeople;
+	}
+
+	@Test
+	public void main() {
+		System.out.println("----------");
+		System.out.println("Selecting a winner");
+
+		String[] people = getPeople();
+		setNumPeople(people.length);
+		assert(numPeople>0); //will fail if you change this to numPeople<2
+		System.out.println(people[winnerIs()]);
+	}
+
+	
+}
+

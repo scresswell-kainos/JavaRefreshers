@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;diceGames.diceGroupClass&apos; to &apos;DiceGroupClass&apos;&#x0A;- Original project: &apos;ConstructorsInheritance&apos;&#x0A;- Original element: &apos;diceGames.diceGroupClass&apos;&#x0A;- Renamed element: &apos;diceGames.DiceGroupClass&apos;&#x0A;- Update references to refactored element&#x0A;- Rename similarly named elements&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;diceGroupClass&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;diceGames{diceGroupClass.java[diceGroupClass" matchStrategy="1" name="DiceGroupClass" qualified="false" references="true" similarDeclarations="true" stamp="1480093247471" textual="false" version="1.0"/>
+</session>

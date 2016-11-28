@@ -1,0 +1,76 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+ 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class DiceClass {
+
+	//Attributes
+	private int numSides;
+	private int diceRollValue;
+	
+	//Methods
+	public void setNumSides (int sides)
+	{
+		System.out.println("Set number of sides as " + sides);
+		numSides = sides;
+	}
+	
+	public int rollDice ()
+	{
+		diceRollValue = 1 + (int)(Math.random() * numSides);
+		
+		System.out.println("Rolled the number " + diceRollValue);
+		return diceRollValue;
+	}
+	
+	public int diceValue ()
+	{
+		return diceRollValue;
+	}
+	
+	public boolean diceOnOrUnder (int threshold)
+	{
+		if (diceRollValue <= threshold)
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean diceOnOrOver (int threshold)
+	{
+		if (diceRollValue >= threshold)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public boolean diceEquals (int target)
+	{
+		if (diceRollValue == target)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}	
+	
+	@Test
+	public void firsttest()
+	{
+		DiceClass dice1 = new DiceClass();
+		dice1.setNumSides(6);
+		
+		for (int count=0 ; count < 2 ; count ++)
+		{
+			dice1.rollDice();
+		}
+	}
+}

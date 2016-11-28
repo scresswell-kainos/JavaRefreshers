@@ -1,0 +1,76 @@
+package diceGames;
+
+
+public class DiceClass {
+	//Attributes
+	public int numSides;
+	public int diceRollValue;
+
+	//Constructors
+	public DiceClass () //default constructor
+	{
+		this(6);
+	}
+	
+	public DiceClass (int sides) { //constructor specifying sides
+		System.out.println("Base class: constructor called with sides of " + sides);
+		this.numSides=sides;
+	}
+	
+	//methods
+	public int rollDice ()
+	{
+		diceRollValue = 1 + (int)(Math.random() * numSides);
+
+		System.out.println("BASE CLASS: Rolled the number " + diceRollValue);
+		return this.diceRollValue;
+	}
+
+
+	public void setNumSides (int sides)
+	{
+		System.out.println("BASE CLASS: Set number of sides as " + sides);
+		this.numSides = sides;
+	}
+
+	public int getDiceValue ()
+	{
+		return diceRollValue;
+	}
+
+	public boolean diceOnOrUnder (int threshold)
+	{
+		if (diceRollValue >= threshold)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public boolean diceOnOrOver (int threshold)
+	{
+		if (diceRollValue >= threshold)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	public boolean diceEquals (int target)
+	{
+		if (diceRollValue == target)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

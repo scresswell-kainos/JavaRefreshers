@@ -1,0 +1,43 @@
+	import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class arryForArrays {
+
+	private int numPeople;
+	
+
+	public void setNumPeople (int n){
+		numPeople = n;
+		assert(n>0);
+	}
+	
+	@Test
+	public int winnerIs(){
+		return ((int)(Math.random()*numPeople));
+	}
+	
+	public String[] getPeople(){
+		String[] listOfPeople = {
+				"Annie",
+				"Bob",
+				"Craig",
+				"Donna",
+				"Eddie",
+				"Fran",
+				"Georgina"
+		};
+		return listOfPeople;
+	}
+
+	
+	public void main() {
+		System.out.println("----------");
+		System.out.println("Selecting a winner");
+
+		String[] people = getPeople();
+		setNumPeople(people.length);
+		System.out.println(people[winnerIs()]);
+	}
+	
+}
+

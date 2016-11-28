@@ -1,0 +1,14 @@
+package diceGames;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class TestClass {
+
+	@Test
+	public void testD20(){
+		DiceClass dice1 = DiceClass(20);
+		for (int count=0; count <20; count++) dice1/rollDice();
+	}
+}

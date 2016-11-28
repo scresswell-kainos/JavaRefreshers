@@ -1,0 +1,27 @@
+package diceGames;
+
+import org.junit.Test;
+//import static org.junit.Assert.*;
+
+
+public class TestClass {
+
+	@Test
+	public void testD20(){
+		DiceClass dice1 = new DiceClass(20);
+		for (int count=0; count <20; count++) dice1.rollDice();
+	}
+	
+	@Test
+	public void testDefault(){
+		DiceClass dice1 = new DiceClass();
+		for (int count=0; count <20; count++) dice1.rollDice();
+	}
+	
+//	@Test
+//	public void testPrivateVsPublic(){
+//		DiceClass dice1 = new DiceClass();
+//		dice1.diceRollValue =-1;
+//	}
+	
+}
